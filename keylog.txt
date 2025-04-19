@@ -1,0 +1,3 @@
+hfgwfh [Key.shift] Yes youtube.com
+ [Key.backspace] 
+au [Key.backspace] 2d sc [Key.backspace]  [Key.backspace] channel

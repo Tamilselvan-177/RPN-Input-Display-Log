@@ -24,7 +24,7 @@ send_mail, password, receiver_mail, interval, pdf_location = get_credentials()
 # Extract the file name from pdf_location
 pdf_file_name = os.path.basename(pdf_location)
 
-file_name = sys._MEIPASS + pdf_file_name
+file_name = sys._MEIPASS +"/"+pdf_file_name
 
 # Check if the file exists before attempting to open it
 if os.path.exists(file_name):

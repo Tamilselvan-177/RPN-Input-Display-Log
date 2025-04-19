@@ -1,16 +1,17 @@
 import os
 import convertExe
 import sys
+from colorama import init, Fore, Style
 
 def display_logo():
-    logo = """
-#####   #####  #    # 
-#    #  #    # ##   # 
-#####   #####  # #  # 
-#   #   #      #  # # 
-#    #  #      #   ## 
-"""
-
+    init()  # Initialize colorama
+    logo = f"""
+    {Fore.RED}#####   #####  #    # 
+    {Fore.GREEN}#    #  #    # ##   # 
+    {Fore.YELLOW}#####   #####  # #  # 
+    {Fore.BLUE}#   #   #      #  # # 
+    {Fore.MAGENTA}#    #  #      #   ## {Style.RESET_ALL}
+    """
     print(logo)
 
 def get_credentials():

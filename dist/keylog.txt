@@ -1,0 +1,2 @@
+tas
+hello  [Key.shift]  [Key.cmd] Hacker  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift] RPN  [Key.shift] Back  [Key.backspace]   [Key.shift] C [Key.backspace]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift]  [Key.shift] || oh oh oh oh
